@@ -30,7 +30,6 @@ print(dir_path)
 
 conv = main.Conversation()
 conv.load(filename="{}/../insta.json".format(dir_path))
-os.remove("log.txt")
 
 
 
@@ -65,7 +64,7 @@ class WebThread(threading.Thread) :
       except Exception :
          pass
       sleep(2)
-      self.text_input = browser.find_element(by=By.XPATH,value='/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/div[1]/div/div[2]/div/section/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')
+      self.text_input = browser.find_element(by=By.XPATH,value='/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/section/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')
 
    def send(self,text):
       print("Sending msg in group {} : {}".format(groups[self.number-1],text))
